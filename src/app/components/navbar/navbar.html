@@ -1,1 +1,77 @@
-<p>navbar works!</p>
+<nav class="bg-default fixed start-0 end-0 top-0">
+  <div
+    class="container px-5 mx-auto text-white transition-all duration-300 overflow-hidden"
+    [class]="{ 'py-8': !isScrolled, 'py-5': isScrolled }"
+  >
+    <div class="flex justify-between items-center">
+      <h1 class="lg:text-[2rem] text-[1.5rem] font-bold uppercase">
+        <a routerLink="/"> Start Framework</a>
+      </h1>
+      <ul class="hidden lg:flex gap-8">
+        <li class="font-bold uppercase">
+          <a
+            routerLink="/about"
+            routerLinkActive="bg-secondary px-4 py-2 rounded-[12px]"
+            class="transition-all"
+            >About</a
+          >
+        </li>
+        <li class="font-bold uppercase">
+          <a
+            routerLink="/portofolio"
+            routerLinkActive="bg-secondary px-4 py-2 rounded-[12px]"
+            class="transition-all"
+            >portfolio</a
+          >
+        </li>
+        <li class="font-bold uppercase">
+          <a
+            routerLink="/contact"
+            routerLinkActive="bg-secondary px-4 py-2 rounded-[12px]"
+            class="transition-all"
+            >contact</a
+          >
+        </li>
+      </ul>
+      <button
+        class="lg:hidden rounded-[4px] border p-1 cursor-pointer"
+        (click)="toggleShowMenuItemMobile()"
+      >
+        <i class="fa-solid fa-bars text-2xl cursor-pointer"></i>
+      </button>
+    </div>
+    <ul
+      class="flex gap-5 flex-col lg:hidden transition-all duration-500"
+      [class]="{'pt-5': isMobileShow,
+                'h-0': !isMobileShow,
+                'h-[120px]': isMobileShow,
+                'opacity-0': !isMobileShow,
+                'opacity-100': isMobileShow,}"
+    >
+      <li class="font-bold uppercase">
+        <a
+          routerLink="/about"
+          routerLinkActive="bg-secondary px-4 py-2 rounded-[12px]"
+          class="transition-all"
+          >About</a
+        >
+      </li>
+      <li class="font-bold uppercase">
+        <a
+          routerLink="/portofolio"
+          routerLinkActive="bg-secondary px-4 py-2 rounded-[12px]"
+          class="transition-all"
+          >portfolio</a
+        >
+      </li>
+      <li class="font-bold uppercase">
+        <a
+          routerLink="/contact"
+          routerLinkActive="bg-secondary px-4 py-2 rounded-[12px]"
+          class="transition-all"
+          >contact</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>
