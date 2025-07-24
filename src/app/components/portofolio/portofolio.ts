@@ -4,8 +4,27 @@ import { Component } from '@angular/core';
   selector: 'app-portofolio',
   imports: [],
   templateUrl: './portofolio.html',
-  styleUrl: './portofolio.css'
+  styleUrl: './portofolio.css',
 })
 export class Portofolio {
-
+  isModelShow: boolean = false;
+  currentImgSrc: string = '';
+  portfolioImages = [
+    '/assets/images/poert1.png',
+    '/assets/images/port2.png',
+    '/assets/images/port3.png',
+    '/assets/images/poert1.png',
+    '/assets/images/port2.png',
+    '/assets/images/port3.png',
+  ];
+  apperModel(srcImage: string) {
+    this.isModelShow = true;
+    this.currentImgSrc = srcImage;
+  }
+  hidModel() {
+    this.isModelShow = false;
+  }
+  preventClose(event: MouseEvent) {
+    event.stopPropagation();
+  }
 }

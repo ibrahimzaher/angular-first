@@ -1,1 +1,115 @@
-<p>contact works!</p>
+<section class="min-h-[calc(100vh-120px)] flex flex-col flex-wrap py-5">
+  <div class="flex flex-col justify-start items-center pt-5 gap-2 w-full">
+    <h1 class="text-default text-[2rem] lg:text-[2.5rem] font-bold uppercase">
+      conatct section
+    </h1>
+    <div
+      class="flex w-full justify-center items-center gap-5 text-default mb-5"
+    >
+      <hr class="w-[100px] border-2" />
+      <i class="fa fa-star"></i>
+      <hr class="w-[100px] border-2" />
+    </div>
+  </div>
+  <form
+    class="container mx-auto md:w-1/2 w-full p-5 md:p-0 flex flex-col gap-5"
+    (ngSubmit)="submit($event)"
+  >
+    <div class="w-full relative">
+      <label
+        for="userName"
+        class="absolute top-0 left-0 transition-all duration-500 transform pointer-events-none text-secondary"
+        [class]="{
+          'opacity-0': userName === '',
+          'opacity-100': userName !== '',
+           'translatex-10': userName === '',
+          'translate-0': userName !== '',
+        }"
+      >
+        userName:
+      </label>
+      <input
+        type="text"
+        name="userName"
+        id="userName"
+        placeholder="userName"
+        [(ngModel)]="userName"
+        class="border-b py-2 focus:outline-0 border-gray-300 w-full mt-4 placeholder:text-gray-700"
+      />
+    </div>
+    <div class="w-full relative">
+      <label
+        for="userAge"
+        class="absolute top-0 left-0 transition-all duration-500 transform pointer-events-none text-secondary"
+        [class]="{
+          'opacity-0': userAge ===null,
+          'opacity-100': userAge !==null,
+           'translatex-10': userAge ===null,
+          'translate-0': userAge !==null,
+        }"
+      >
+        userAge:
+      </label>
+      <input
+        type="number"
+        name="userAge"
+        id="userAge"
+        placeholder="userAge"
+        min="10"
+        max="102"
+        [(ngModel)]="userAge"
+        class="border-b py-2 focus:outline-0 border-gray-300 w-full mt-4 placeholder:text-gray-700"
+      />
+    </div>
+    <div class="w-full relative">
+      <label
+        for="userEmail"
+        class="absolute top-0 left-0 transition-all duration-500 transform pointer-events-none text-secondary"
+        [class]="{
+          'opacity-0': userEmail === '',
+          'opacity-100': userEmail !== '',
+           'translatex-10': userEmail === '',
+          'translate-0': userEmail !== '',
+        }"
+      >
+        userEmail:
+      </label>
+      <input
+        type="text"
+        name="userEmail"
+        id="userEmail"
+        placeholder="userEmail"
+        [(ngModel)]="userEmail"
+        class="border-b py-2 focus:outline-0 border-gray-300 w-full mt-4 placeholder:text-gray-700"
+      />
+    </div>
+    <div class="w-full relative">
+      <label
+        for="userPassword"
+        class="absolute top-0 left-0 transition-all duration-500 transform pointer-events-none text-secondary"
+        [class]="{
+          'opacity-0': userPassword === '',
+          'opacity-100': userPassword !== '',
+           'translatex-10': userPassword === '',
+          'translate-0': userPassword !== '',
+        }"
+      >
+        userPassword:
+      </label>
+      <input
+        type="text"
+        name="userPassword"
+        id="userPassword"
+        placeholder="userPassword"
+        [(ngModel)]="userPassword"
+        class="border-b py-2 focus:outline-0 border-gray-300 w-full mt-4 placeholder:text-gray-700"
+      />
+    </div>
+    <button
+      class="bg-secondary px-8 py-2 text-white w-fit rounded-[4px] focus:outline-0 transition-transform duration-100 active:scale-95 mt-5 cursor-pointer"
+      type="submit"
+    >
+      Send Message
+    </button>
+  </form>
+</section>
