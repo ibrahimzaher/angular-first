@@ -11,12 +11,7 @@
         class="m-5 md:w-[calc(50%-40px)] md:m-0 lg:w-[calc(33.333%-40px)] relative group"
         (click)="apperModel(item)"
       >
-        <img [src]="item" alt="" class="rounded-[10px]" />
-        <div
-          class="absolute opacity-0 bg-linear-to-r bg-[#1abc9ce6] inset-0 rounded-[10px] flex group-hover:opacity-100 transition-all duration-1000 justify-center items-center text-white cursor-pointer"
-        >
-          <i class="fa fa-plus text-7xl"></i>
-        </div>
+        <gallery-item [imgSrc]="item" />
       </div>
       }
     </div>

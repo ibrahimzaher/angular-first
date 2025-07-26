@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { HeaderContent } from '../../shared/components/header-content/header-content';
+import { GalleryItem } from '../../shared/components/gallery-item/gallery-item';
 
 @Component({
   selector: 'app-portofolio',
-  imports: [HeaderContent],
+  imports: [HeaderContent, GalleryItem],
   templateUrl: './portofolio.html',
   styleUrl: './portofolio.css',
 })
