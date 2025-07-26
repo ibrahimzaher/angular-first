@@ -1,16 +1,10 @@
 <section class="min-h-[calc(100vh-120px)] flex justify-center py-5">
   <div class="flex flex-col justify-start items-center pt-5 pb-10 gap-2">
-    <h1 class="text-default text-[2rem] lg:text-[2.5rem] font-bold uppercase">
-      portfolio component
-    </h1>
+    <header-content
+      styleColor="var(--color-default)"
+      [text]="'portfolio component'"
+    />
 
-    <div
-      class="flex w-full justify-center items-center gap-5 text-default mb-5"
-    >
-      <hr class="w-[100px] border-2" />
-      <i class="fa fa-star"></i>
-      <hr class="w-[100px] border-2" />
-    </div>
     <div class="container mx-auto flex flex-wrap justify-center gap-10">
       @for (item of portfolioImages; track $index) {
       <div

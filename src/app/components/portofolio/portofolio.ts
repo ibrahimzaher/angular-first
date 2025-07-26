@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { HeaderContent } from '../../shared/components/header-content/header-content';
 
 @Component({
   selector: 'app-portofolio',
-  imports: [],
+  imports: [HeaderContent],
   templateUrl: './portofolio.html',
   styleUrl: './portofolio.css',
 })
